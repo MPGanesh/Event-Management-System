@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+   
+  <title></title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+    .slider{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to left, #ba7453, #d1a984);
+      z-index: -1;
+    }
+   nav1{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height: 10vh;
+    color: white;
+
+    }
+    #logo{
+      grid-column: 2/3;
+      font-size: 50px;
+      object-fit: cover;
+      width: 100%
+      height: 100%;
+
+    }
+    .hamburger{
+      justify-self: end;
+
+    }
+    section{
+      display: flex;
+      height: 80vh;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .hero img{
+       align-content: center;
+       object-fit: cover;
+
+    }
+    .hero{
+      height: 1000%;
+      width: 100%;
+      grid-column: 2/3;
+      font-size: 50px;
+      object-fit: cover;
+      
+
+
+    }
+    .headline{
+      position: absolute;
+      top: 70%;
+      left: 10%;
+      font-size: 12px;
+      transform:translate(-20%, -70%);
+      color: black;
+      z-index: 3;
+    }
+    .hero::after{
+      content: "",
+      background: black;
+      width: 100%
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top:0;
+      opacity: 0.3;
+
+
+  
+  
+   
+     a{
+      color:white;
+      font-size: 25px;
+     }
+     body{
+      background-color: black;
+      
+     }
+
+     *{
+    margin: 0;
+    padding: 0;
+    color: #454545;
+  }
+
+     .bg-image {
+  /* The image used */
+  background-image: url("{% static 'images/main1.jpg' %}");
+
+ 
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav{
+  background:  #111;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+.dinesh{
+  text-align: center;
+}
+
+.Ganesh{
+background-color:black;
+color:white;
+text-align: center;
+}
+
+
+.sm{
+  margin: 20px 0;
+  color: white;
+}
+
+
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+
+h4{
+font-color:"white";
+}
+
+
+
+
+    
+  </style>
+</head>
+<body>
+  
+  
+  <div class="bg-image">
+    
+    
+  </div>
+  <header>
+    <nav1>
+    <h3 id="logo">Event Manager</h3>
+     </nav1>
+   
+    <section>
+      <div class="hero">
+&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         <img src="{% static 'images/main1.jpg' %}">
+        <h1 class="headline">Event Manager</h1>
+      </div>
+      
+    </section>
+    
+  </header>
+
+
+  <div class="slider"></div>
+
+
+        
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const hero = document.querySelector('.hero');
+  const slider = document.querySelector('.slider');
+  
+  const logo = document.querySelector('#logo');
+  const hamburger = document.querySelector('.hamburger');
+   const headline = document.querySelector('.headline');
+
+  const t1 = new TimelineMax();
+
+  t1.fromTo(hero,1, {height: "0%"}, {height: '80%'})
+  
+  .fromTo(slider, 1.2, {x: "-100%"},{ x: "0%", ease: Power2.easeInOut}, "-=1.2")
+
+  
+</script>
+</body>
+</html>
